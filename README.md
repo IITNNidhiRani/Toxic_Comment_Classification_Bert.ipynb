@@ -27,8 +27,7 @@ This notebook fine‐tunes a pre-trained BERT (bert-base-uncased) model on the *
 ---
 
 ##  System Architecture
-
-![System Architecture of UniFairNet](images/architecture.png)
+https://github.com/IITNNidhiRani/Toxic_Comment_Classification_Bert.ipynb/blob/main/Editor%20_%20Mermaid%20Chart-2025-06-15-173935.png
 
 UniFairNet is a modular pipeline for multimodal hateful content detection and blurring:
 
