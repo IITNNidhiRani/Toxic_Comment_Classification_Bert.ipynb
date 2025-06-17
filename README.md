@@ -1,5 +1,3 @@
-# Toxic_Comment_Classification_Bert.ipynb
-
 
 # Toxic Comment Classification with BERT
 
