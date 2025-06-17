@@ -26,6 +26,42 @@ This notebook fine‐tunes a pre-trained BERT (bert-base-uncased) model on the *
 
 ---
 
+##  System Architecture
+
+![System Architecture of UniFairNet](images/architecture.png)
+
+UniFairNet is a modular pipeline for multimodal hateful content detection and blurring:
+
+### 1. Data & Preprocessing  
+1. **Load Dataset**  
+   - Read `train.csv`, `dev.csv`, `test.csv`, etc.  
+   - Contains `id`, `comment_text`, and six binary toxicity labels.  
+2. **Tokenization**  
+   - Use `BertTokenizer` (`bert-base-uncased`) with `max_length=128`.  
+   - Produce `input_ids` & `attention_mask`.  
+3. **Dataset Creation**  
+   - Wrap into PyTorch `Dataset`/`DataLoader` for train/val/test.  
+
+### 2. Model Setup & Training  
+1. **Model Definition**  
+   - `BertForSequenceClassification.from_pretrained(..., num_labels=6)`  
+   - Sigmoid‐activated head for multi‐label outputs.  
+2. **Optimizer & Scheduler**  
+   - `AdamW(lr=2e-5)`, optional LR scheduler with warm-up.  
+3. **Training Loop**  
+   - 3 epochs, BCE loss, log loss every 100 steps (`training_log.xlsx`).  
+4. **Save Artifacts**  
+   - `model.save_pretrained("model/")`  
+   - `tokenizer.save_pretrained("model/")`  
+
+### 3. Inference & Evaluation  
+1. **Inference**  
+   - Reload model/tokenizer in `eval()` mode.  
+   - Run test split → sigmoid‐probs → threshold at 0.5 → `test_predicted.csv`.  
+2. **Evaluation Metrics**  
+   - **Accuracy**: exact‐match across all six labels.  
+   - **Macro‐F1** and **Macro‐ROC‐AUC** averaged over labels.  
+ 
 ##  Features
 
 - **Multi‐label classification** over six toxicity subtypes  
