@@ -8,7 +8,7 @@ Given an input comment, the model predicts six toxicity subtypes: **toxic**, **s
 
 ---
 
-## 📖 Table of Contents
+##  Table of Contents
 
 1. [Background](#background)  
 2. [Features](#features)  
@@ -21,14 +21,14 @@ Given an input comment, the model predicts six toxicity subtypes: **toxic**, **s
 
 ---
 
-## 🧐 Background
+## Background
 
 Automated moderation systems must contend with subtle, context-dependent toxicity in text.  
 This notebook fine‐tunes a pre-trained BERT (bert-base-uncased) model on the **Wikipedia Toxicity Subtypes** dataset, which contains ∼127 K comments annotated for six toxicity labels.
 
 ---
 
-## ✨ Features
+##  Features
 
 - **Multi‐label classification** over six toxicity subtypes  
 - **Data preprocessing** with the BERT tokenizer (max length 128)  
@@ -39,7 +39,7 @@ This notebook fine‐tunes a pre-trained BERT (bert-base-uncased) model on the *
 
 ---
 
-## 📂 Data
+## Data
 
 We use the **Wikipedia Toxicity Subtypes** split as follows:
 
@@ -54,12 +54,6 @@ Download `train.csv`, `dev.csv`, `test.csv`, and `test_public_expanded.csv` from
 
 ---
 
-## ⚙️ Installation & Requirements
-
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/<your-username>/toxic-comment-bert.git
-   cd toxic-comment-bert
 
 
 📓 Notebook Overview
@@ -88,11 +82,15 @@ Macro-F1: 0.9075
 
 Macro-ROC-AUC: 0.9621
 
-📚 Citations
+Citations
 If you use this work, please cite:
 
 N. Rani, “Fine-Tuning Large Language Models Using NLP Techniques for Enhanced Bias Mitigation in Generative AI,” M.Tech project report, IIT Jodhpur, 2025.
 
 And for the dataset:
 
-cjadams et al., “Toxic comment classification challenge,” Kaggle, 2017.
+1. Wikipedia Toxicity Subtypes (Text)
+• Comments from Wikipedia annotated for toxicity types.
+• Human-labeled, split: ~80% train, 10% val, 10% test.
+•https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data
+![image](https://github.com/user-attachments/assets/47c2fed4-6d3b-44c9-b5cb-a8b99aa2e5a5)
