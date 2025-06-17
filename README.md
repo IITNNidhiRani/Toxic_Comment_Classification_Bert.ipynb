@@ -4,7 +4,8 @@
 This repository implements a multi‐label toxic comment classifier based on fine‐tuning BERT.  
 Given an input comment, the model predicts six toxicity subtypes: **toxic**, **severe toxic**, **obscene**, **threat**, **insult**, and **identity hate**.
 
----
+---![Uploading Editor _ Mermaid Chart-2025-06-15-173935.png…]()
+
 
 ##  Table of Contents
 
