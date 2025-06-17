@@ -91,4 +91,3 @@ And for the dataset:
 • Comments from Wikipedia annotated for toxicity types.
 • Human-labeled, split: ~80% train, 10% val, 10% test.
 •https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data
-![image](https://github.com/user-attachments/assets/47c2fed4-6d3b-44c9-b5cb-a8b99aa2e5a5)
